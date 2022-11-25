@@ -82,7 +82,8 @@ void loop(){
 
   if (isBrewing) {
     if (timeInSeconds(timeString) - brewStartTime >= pumpDuration + heatDuration) { 
-      heaterActive = false; 
+      heaterActive = false;
+      isBrewing = false; 
       return;
     }
     
